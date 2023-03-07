@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>king</title>
+        <style>
+            .first{
+                height: 50px;
+                width:50px;
+                background-color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="first">
+
+        </div>
+        <button class="submit">Submit</button>
+        <script>
+            var exa=document.querySelector(".first");
+            var ob=document.querySelector(".submit");
+            ob.addEventListener('click',()=>{
+                exa.classList.toggle("first");
+            })
+        </script>
+    </body>
+</html>
