@@ -1,0 +1,17 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    display:flex;
+    align-items: center;
+    height:500px;
+    width: 1000px;
+
+}
+.maincontainer{
+    display:flex;
+    height:300px;
+    width:600px;
+    background-color:yellow ;
+}

@@ -1,0 +1,11 @@
+.text1{
+    font-family: cursive;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 30px;
+    color: red;
+    letter-spacing: 2px;
+    word-spacing: 5px;
+    text-indent: 100px;
+    text-transform: uppercase;
+}

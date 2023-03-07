@@ -1,0 +1,71 @@
+<html>
+  <head>
+    <style>
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .form-group {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+      }
+      label {
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+      input, textarea {
+        padding: 10px;
+        font-size: 16px;
+        border-radius: 5px;
+        border: 1px solid gray;
+      }
+      button {
+        padding: 10px 20px;
+        background-color: lightblue;
+        color: white;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+      }
+      #output {
+        margin-top: 20px;
+        padding: 20px;
+        background-color: lightgray;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <form>
+        <div class="form-group">
+          <label>Name:</label>
+          <input type="text" id="nameInput">
+        </div>
+        <div class="form-group">
+          <label>Email:</label>
+          <input type="email" id="emailInput">
+        </div>
+        <div class="form-group">
+          <label>Message:</label>
+          <textarea id="messageInput"></textarea>
+        </div>
+        <button onclick="displayInput()">Submit</button>
+      </form>
+      <div id="output"></div>
+    </div>
+    <script>
+      function displayInput() {
+        var name = document.getElementById("nameInput").value;
+        var email = document.getElementById("emailInput").value;
+        var message = document.getElementById("messageInput").value;
+        document.getElementById("output").innerHTML = 
+          "Name: " + name + "<br>" + 
+          "Email: " + email + "<br>" + 
+          "Message: " + message;
+      }
+    </script>
+  </body>
+</html>

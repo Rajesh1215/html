@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Add/Delete Blocks with Textarea and Button</title>
+    <style>
+      .block {
+        border: 1px solid black;
+        padding: 10px;
+        margin-bottom: 10px;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Add/Delete Blocks with Textarea and Button</h1>
+    <div id="block-container"></div>
+    <button id="add-button">Add Block</button>
+    <script>
+      // get references to the add button and block container
+      const addButton = document.getElementById("add-button");
+      const blockContainer = document.getElementById("block-container");
+      blockContainer.style.display='flex';
+      blockContainer.style.flexWrap="wrap";
+      
+      // create a function to add a new block
+      const addBlock = () => {
+        // create a new block element
+        const block = document.createElement("div");
+        block.classList.add("block");
+        
+        // create a new textarea element
+        const textarea = document.createElement("textarea");
+        textarea.rows = "10";
+        textarea.cols = "30";
+        textarea.placeholder = "Enter some text...";
+        
+        // create a new delete button element
+        const deleteButton = document.createElement("button");
+        deleteButton.innerText = "Delete";
+        deleteButton.addEventListener("click", () => {
+          block.remove();
+        });
+        
+        // add the textarea and delete button to the block
+        block.appendChild(textarea);
+        block.appendChild(deleteButton);
+        
+        // add the block to the block container
+        blockContainer.appendChild(block);
+      };
+      
+      // add a click event listener to the add button
+      addButton.addEventListener("click", addBlock);
+    </script>
+  </body>
+</html>

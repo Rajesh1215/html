@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Dictionary Example</title>
+    <script>
+      var dictionary = {
+        "apple": "a round fruit with red or green skin and a white interior",
+        "banana": "a long curved fruit with yellow skin and soft white flesh",
+        "orange": "a round fruit with orange skin and juicy segments inside"
+      };
+
+      function displayDictionary() {
+        var output = "";
+        for (var key in dictionary) {
+          output += "<li><b>" + key + ":</b> " + dictionary[key] + "</li>";
+        }
+        document.getElementById("dictionary").innerHTML = "<ul>" + output + "</ul>";
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Dictionary Example</h1>
+    <button onclick="displayDictionary()">Show dictionary</button>
+    <div id="dictionary"></div>
+  </body>
+</html>

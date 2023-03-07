@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Dynamic Block Creation</title>
+  <style>
+    .block-container {
+      display: flex;
+      flex-wrap: auto;
+    }
+
+    .block {
+      background-color: #f0f0f0;
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin-right: 10px;
+      margin-bottom: 10px;
+      flex: 1;
+    }
+  </style>
+</head>
+<body>
+  <button id="addBtn">Add Block</button>
+  <div class="block-container" id="blockContainer"></div>
+
+  <script>
+    var blockCount = 0;
+    var blockContainer = document.getElementById('blockContainer');
+    var addBtn = document.getElementById('addBtn');
+
+    addBtn.addEventListener('click', function() {
+      var block = document.createElement('div');
+      block.classList.add('block');
+      block.setAttribute('id', 'block-' + blockCount);
+
+      var red = Math.floor(Math.random() * 256);
+      var green = Math.floor(Math.random() * 256);
+      var blue = Math.floor(Math.random() * 256);
+      var color = 'rgb(' + red + ',' + green + ',' + blue + ')';
+      block.style.backgroundColor = color;
+
+      var deleteBtn = document.createElement('button');
+      deleteBtn.textContent = 'Delete Block';
+      deleteBtn.addEventListener('click', function() {
+        var blockId = this.parentNode.getAttribute('id');
+        var block = document.getElementById(blockId);
+        blockContainer.removeChild(block);
+      });
+
+      block.appendChild(deleteBtn);
+      blockContainer.appendChild(block);
+
+      blockCount++;
+    });
+  </script>
+</body>
+</html>

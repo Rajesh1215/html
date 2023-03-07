@@ -1,0 +1,26 @@
+
+
+  .hi:hover {
+    border:1px solid white;
+  }
+
+.cs1{
+  height:100vh;
+}
+.im{
+  height:30vh;
+  width:auto;
+}
+.quo{
+  font-size: 7vh;
+}
+
+@media screen and (max-width: 950px) {
+  .im,col{
+    height:90%;
+    width: 100%;
+  }
+  .row{
+    flex-direction: column;
+  }
+}

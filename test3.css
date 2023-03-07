@@ -1,0 +1,18 @@
+*{
+    padding:0;
+    margin:0;
+}
+.cs1{
+    padding:10px 20px 30px 40px;
+    margin:40px 30px 20px 10px;
+    height: 500px;
+    width: 500px;
+    background-color:green;
+}
+.cs2{
+    padding:10px 20px 30px 40px;
+    margin:40px 30px 20px 10px;
+    height: 300px;
+    width: 300px;
+    background-color:yellow;
+}

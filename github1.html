@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Notes save </title>
+
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            background-color: rgba(198, 198, 198, 0.682);
+        }
+        .lists{
+            width: 80%;
+            height: auto;
+            margin: 0 auto;
+        }
+
+        .hd4notes{
+            text-align: center;
+        }
+
+        .content{
+            margin-left: 12px;
+            margin-bottom: 30px;
+            border-radius: 25%;
+        }
+
+        .hd4notes, .content{
+            /* width: 100%; */
+        }
+        
+        .note1{
+            width: 250px;
+            border: 1px solid grey;
+            /* display: inline; */
+            height: 200px;
+            /* flex-wrap: wrap; */
+            display: flex;
+            border-radius: 20px;
+            box-shadow: 10px 5px 5px rgb(164, 164, 164);
+        }
+
+        .outerSpan{
+            position: absolute;
+            left: 30px;
+            width: 50px;
+            height: 15px;
+            border: 1px solid green;
+            display: block;
+            overflow-y: visible;
+            background-color: rebeccapurple;
+        }
+
+        .innerSpan{
+            position: relative;
+            left: 46px;
+            top: -18px;
+            width: 15px;
+            height: 50px;
+            border: 1px solid green;
+            display: block;
+            background-color: rebeccapurple;
+        }
+        .notes{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .btn{
+            align-items: center;
+            position: relative;
+            top: 85px;
+            /* border: 1px solid blue; */
+        }
+
+        .writingPart{
+            padding: 10px;
+            width: 98%;
+            height: auto;
+            scroll-behavior: auto;
+            border: none;
+            border-radius: 25px;
+        }
+
+
+        .hidden{
+            visibility: hidden;
+        }
+
+        .deleteDtn{
+            margin: 3px 3px 3px 0;
+            border-radius: 25px;
+            width: 43px;
+            height: 40px;
+            border: 1px solid orange;
+            background-color: yellow;
+        }
+
+        .writingPart:hover{
+            border: none;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="lists">
+            <h2 class="hd4notes"> Notes </h2>
+            <div class="notes">
+                <div class="firstNote content">
+                    <div class="note1">
+                        <textarea class='writingPart'></textarea>
+                        <button class="deleteDtn"> D </button>
+                    </div>
+                </div>
+                
+                <div class="btn">
+                    <span class="outerSpan">  </span>
+                    <span class="innerSpan"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./app.js"></script>
+</body>
+</html>

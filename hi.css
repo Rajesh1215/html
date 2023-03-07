@@ -1,0 +1,27 @@
+.cont{
+        background-color: aqua;
+}
+.a{
+        border: 5px solid black;
+}
+.b{
+        border: 5px dotted black;
+}
+.c{
+        border: 5px dashed black;
+}
+.d{
+        border: 5px double black;
+}
+.e{
+        border: 5px inset black;
+}
+.f{
+        border: 5px outset black;
+}
+.g{
+        border: 5px solid black;
+}
+.h{
+        border: 5px solid black;
+}
